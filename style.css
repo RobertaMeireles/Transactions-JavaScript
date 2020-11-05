@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f7f7f7;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.container h2{
+    margin: 6%;
+    text-align: center;
+}
+
+.container h3{
+    margin: 0;
+}
+
+.valueShow{
+    margin-top: 0;
+    font-size: 2em;
+}
+
+p{
+    margin: 0;
+}
+
+/*------Caixa branca que indica os valores positivos e negativos------*/
+.info{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    margin-bottom: 10%;
+    border: 1px solid #f7f7f7;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.info .valueShow{
+    margin: 0;
+}
+
+#income{
+    color: #2ecc71;
+}
+
+#expense{
+    color: #e74c3c;
+}
+
+/*------Lista das transações inclusas-------*/
+#list,
+#infoSearch{
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+#infoSearch{
+    margin-bottom: 0;
+}
+
+
+ul {
+    padding-inline-start: 0;
+}
+
+#list li,
+#infoSearch li{
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#list li.borderPositive,
+#infoSearch li.borderPositive{
+    border-right: 2px solid #2ecc71;
+}
+
+#list li.borderNegative,
+#infoSearch li.borderNegative{
+    border-right: 2px solid #e74c3c;
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+  
+#list li:hover .delete-btn {
+    opacity: 1;
+}
+
+/*------Titulos do programa-------*/
+.container .tituleborder{
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    border-bottom: 1px solid grey;
+}
+
+/*---------Formulários----------*/
+#search,
+#form{
+    display: none;
+}
+
+#searchShow,
+#transactionShow{
+    cursor: pointer;
+}
+
+.form-control input,
+.form-search input{
+    width: 100%;
+    margin: 2% 0;
+    padding: 2%;
+}
+
+/*---------Botões----------*/
+.btn,
+.btnSearch{
+    justify-content: center;
+    width: 100%;
+    margin: 5% 0;
+    padding: 2%;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1em;
+}
+
+.btn:hover,
+.btnSearch:hover{
+    background-color: white;
+    color: blueviolet;
+}
+
