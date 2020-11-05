@@ -126,7 +126,7 @@ class Bd {
             functionsChangeDisplay (error,'none')
             y = false
         }else{
-            noRegistrer('The value dosent exist!')
+            noRegistrer('The value doesnt exist!')
         }
     }
 
